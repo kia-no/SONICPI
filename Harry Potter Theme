@@ -1,0 +1,11 @@
+sleep 2
+play :B4
+sleep 1
+play :E5
+sleep 1.5
+play :G5
+sleep 0.75
+play :F5
+sleep 1
+play :E5
+sleep 2
