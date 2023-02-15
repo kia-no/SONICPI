@@ -9,3 +9,17 @@ play :F5
 sleep 1
 play :E5
 sleep 2
+play :G5
+sleep 2
+play :G5
+sleep 3
+play :F5
+sleep 3
+play :E5
+sleep 1.5
+play :G5
+sleep 0.75
+play :F5
+sleep 1
+play :G5
+sleep 2
