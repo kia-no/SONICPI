@@ -1,7 +1,10 @@
 use_bpm 160
 use_synth :piano
+the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
+sample the_weeknd
+sleep 47
 live_loop :blinding do
-  with_fx :autotuner do
+  with_fx :echo do
     play :d5
     sleep 2
     play :d5
