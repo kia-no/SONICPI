@@ -58,13 +58,13 @@ end
 live_loop :lights do
   play :g5, sustain: 2
   play :b4, sustain: 2
-  sleep 8
+  sleep 4
   play :c5, sustain: 2
   play :f4, sustain: 2
   sleep 8
   play :e5, sustain: 2
   play :f4, sustain: 2
-  sleep 8
+  sleep 4
   play :e5
   sleep 2
   play :e5
