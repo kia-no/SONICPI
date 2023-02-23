@@ -1,9 +1,9 @@
-use_bpm 140
+use_bpm 160
 use_synth :piano
 live_loop :blinding do
   with_fx :autotuner do
     play :d5
-    sleep 4
+    sleep 2
     play :d5
     sleep 1.5
     play :c5
