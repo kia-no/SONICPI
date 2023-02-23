@@ -1,4 +1,4 @@
-use_bpm 118
+use_bpm 140
 use_synth :piano
 play :d5
 sleep 4
@@ -10,10 +10,8 @@ play :d5
 sleep 0.5
 play :e5
 sleep 1
-play :a4
-sleep 0.5
-play :a4
-sleep 0.5
+play :a4, sustain: 2
+sleep 1
 play :c5
 sleep 1.5
 play :d5
@@ -22,3 +20,35 @@ play :d5
 sleep 1.5
 play :c5
 sleep 0.5
+play :d5
+sleep 0.5
+play :e5
+sleep 1
+play :a4, sustain: 2
+sleep 1
+play :c5
+sleep 1.5
+play :g5
+sleep 0.5
+play :e5
+sleep 1
+play :d5, sustain: 2
+sleep 1
+play :c5
+sleep 1.5
+play :g5
+sleep 0.5
+play :e5
+sleep 1
+play :d5, sustain: 2
+sleep 1
+play :c5
+sleep 1.5
+play :g5
+sleep 0.5
+play :e5
+sleep 1
+play :d5, sustain: 2
+sleep 1
+play :c5
+sleep 1.5
