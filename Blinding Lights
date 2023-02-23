@@ -1,62 +1,64 @@
 use_bpm 140
 use_synth :piano
 live_loop :blinding do
-  play :d5
-  sleep 4
-  play :d5
-  sleep 1.5
-  play :c5
-  sleep 0.5
-  play :d5
-  sleep 0.5
-  play :e5
-  sleep 1
-  play :a4, sustain: 2
-  sleep 1
-  play :c5
-  sleep 1.5
-  play :d5
-  sleep 2
-  play :d5
-  sleep 1.5
-  play :c5
-  sleep 0.5
-  play :d5
-  sleep 0.5
-  play :e5
-  sleep 1
-  play :a4, sustain: 2
-  sleep 1
-  play :c5
-  sleep 1.5
-  play :g5
-  sleep 0.5
-  play :e5
-  sleep 1
-  play :d5, sustain: 2
-  sleep 1
-  play :c5
-  sleep 1.5
-  play :g5
-  sleep 0.5
-  play :e5
-  sleep 1
-  play :d5, sustain: 2
-  sleep 1
-  play :c5
-  sleep 1.5
-  play :g5
-  sleep 0.5
-  play :e5
-  sleep 1
-  play :d5, sustain: 2
-  sleep 1
-  play :c5
-  sleep 1.5
+  with_fx :autotuner do
+    play :d5
+    sleep 4
+    play :d5
+    sleep 1.5
+    play :c5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 1
+    play :a4, sustain: 2
+    sleep 1
+    play :c5
+    sleep 1.5
+    play :d5
+    sleep 2
+    play :d5
+    sleep 1.5
+    play :c5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 1
+    play :a4, sustain: 2
+    sleep 1
+    play :c5
+    sleep 1.5
+    play :g5
+    sleep 0.5
+    play :e5
+    sleep 1
+    play :d5, sustain: 2
+    sleep 1
+    play :c5
+    sleep 1.5
+    play :g5
+    sleep 0.5
+    play :e5
+    sleep 1
+    play :d5, sustain: 2
+    sleep 1
+    play :c5
+    sleep 1.5
+    play :g5
+    sleep 0.5
+    play :e5
+    sleep 1
+    play :d5, sustain: 2
+    sleep 1
+    play :c5
+    sleep 1.5
+  end
 end
 
 live_loop :lights do
-  play :g5, sustain: 2
+  play :f5, sustain: 2
   play :b4, sustain: 2
   sleep 4
   play :c5, sustain: 2
