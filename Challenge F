@@ -1,0 +1,17 @@
+#challenge F
+use_synth :piano
+x = 0.25
+p = 21
+
+88.times do
+  play p
+  p = p + 1
+  sleep x
+end
+p = 108
+x = 0.125
+88.times do
+  play p
+  p = p - 1
+  sleep x
+end
