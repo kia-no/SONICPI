@@ -3,14 +3,17 @@ use_synth :piano
 the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
 sample the_weeknd
 sleep 47
+define :weeknd do
+  play :d5
+  sleep 1.5
+  play :c5
+  sleep 0.5
+end
 live_loop :blinding do
   with_fx :echo do
     play :d5
     sleep 2
-    play :d5
-    sleep 1.5
-    play :c5
-    sleep 0.5
+    weeknd
     play :d5
     sleep 0.5
     play :e5
@@ -21,10 +24,7 @@ live_loop :blinding do
     sleep 1.5
     play :d5
     sleep 2
-    play :d5
-    sleep 1.5
-    play :c5
-    sleep 0.5
+    weeknd
     play :d5
     sleep 0.5
     play :e5
@@ -51,11 +51,11 @@ live_loop :blinding do
     sleep 1.5
     play :g5
     sleep 0.5
-    play :e5
+    play :e5, amp: 2
     sleep 1
-    play :d5, sustain: 2
+    play :d5, sustain: 2, amp: 1
     sleep 1
-    play :c5
+    play :c5, amp: 0.5
     sleep 1.5
   end
 end
