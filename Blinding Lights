@@ -55,7 +55,7 @@ live_loop :blinding do
     sleep 1
     play :d5, sustain: 2, amp: 1
     sleep 1
-    play :c5, amp: 0.5
+    play :c5, amp: 0.25
     sleep 1.5
   end
 end
