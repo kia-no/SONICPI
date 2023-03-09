@@ -1,3 +1,4 @@
+#weeknd
 use_bpm 160
 use_synth :piano
 the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
@@ -9,69 +10,82 @@ define :weeknd do
   play :c5
   sleep 0.5
 end
+
 live_loop :blinding do
   with_fx :echo do
-    play :d5
-    sleep 2
-    weeknd
-    play :d5
-    sleep 0.5
-    play :e5
-    sleep 1
-    play :a4, sustain: 2
-    sleep 1
-    play :c5
-    sleep 1.5
-    play :d5
-    sleep 2
-    weeknd
-    play :d5
-    sleep 0.5
-    play :e5
-    sleep 1
-    play :a4, sustain: 2
-    sleep 1
-    play :c5
-    sleep 1.5
-    play :g5
-    sleep 0.5
-    play :e5
-    sleep 1
-    play :d5, sustain: 2
-    sleep 1
-    play :c5
-    sleep 1.5
-    play :g5
-    sleep 0.5
-    play :e5
-    sleep 1
-    play :d5, sustain: 2
-    sleep 1
-    play :c5
-    sleep 1.5
-    play :g5
-    sleep 0.5
-    play :e5, amp: 2
-    sleep 1
-    play :d5, sustain: 2, amp: 1
-    sleep 1
-    play :c5, amp: 0.25
-    sleep 1.5
+    3.times do
+      play :d5
+      sleep 2
+      weeknd
+      play :d5
+      sleep 0.5
+      play :e5
+      sleep 1
+      play :a4, sustain: 2
+      sleep 1
+      play :c5
+      sleep 1.5
+      play :d5
+      sleep 2
+      weeknd
+      play :d5
+      sleep 0.5
+      play :e5
+      sleep 1
+      play :a4, sustain: 2
+      sleep 1
+      play :c5
+      sleep 1.5
+      play :g5
+      sleep 0.5
+      play :e5
+      sleep 1
+      play :d5, sustain: 2
+      sleep 1
+      play :c5
+      sleep 1.5
+      play :g5
+      sleep 0.5
+      play :e5
+      sleep 1
+      play :d5, sustain: 2
+      sleep 1
+      play :c5
+      sleep 1.5
+      play :g5
+      sleep 0.5
+      play :e5, amp: 2
+      sleep 1
+      play :d5, sustain: 2, amp: 1
+      sleep 1
+      play :c5, amp: 0.25
+      sleep 1.5
+    end
+    stop
   end
 end
 
 live_loop :lights do
-  play :f5, sustain: 2
-  play :b4, sustain: 2
-  sleep 4
-  play :c5, sustain: 2
-  play :f4, sustain: 2
-  sleep 8
-  play :e5, sustain: 2
-  play :f4, sustain: 2
-  sleep 4
-  play :e5
-  sleep 2
-  play :e5
-  sleep 2
+  3.times do
+    play :f5, sustain: 2
+    play :b4, sustain: 2
+    sleep 4
+    play :c5, sustain: 2
+    play :f4, sustain: 2
+    sleep 8
+    play :e5, sustain: 2
+    play :f4, sustain: 2
+    sleep 4
+    play :e5
+    sleep 2
+    play :e5
+    sleep 2
+  end
+  stop
 end
+sleep 82
+
+after_hours="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours (Audio).wav"
+
+sample after_hours, amp: 1
+
