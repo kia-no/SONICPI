@@ -1,8 +1,21 @@
 #weeknd
+after_hours="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours (Audio).wav"
+the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
+
 use_bpm 160
 use_synth :piano
-the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
-sample the_weeknd
+
+beats = [:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5]
+sleep = [2,1.5,0.5,0.5,1,1,1,1.5]
+
+live_loop :thewknd do
+  1. times do
+    sample the_weeknd
+    sleep 2
+  end
+  stop
+end
+
 sleep 47
 define :weeknd do
   play :d5
@@ -11,62 +24,24 @@ define :weeknd do
   sleep 0.5
 end
 
+x=0
+y=0
+
 live_loop :blinding do
   with_fx :echo do
-    3.times do
-      play :d5
-      sleep 2
-      weeknd
-      play :d5
-      sleep 0.5
-      play :e5
-      sleep 1
-      play :a4, sustain: 2
-      sleep 1
-      play :c5
-      sleep 1.5
-      play :d5
-      sleep 2
-      weeknd
-      play :d5
-      sleep 0.5
-      play :e5
-      sleep 1
-      play :a4, sustain: 2
-      sleep 1
-      play :c5
-      sleep 1.5
-      play :g5
-      sleep 0.5
-      play :e5
-      sleep 1
-      play :d5, sustain: 2
-      sleep 1
-      play :c5
-      sleep 1.5
-      play :g5
-      sleep 0.5
-      play :e5
-      sleep 1
-      play :d5, sustain: 2
-      sleep 1
-      play :c5
-      sleep 1.5
-      play :g5
-      sleep 0.5
-      play :e5, amp: 2
-      sleep 1
-      play :d5, sustain: 2, amp: 1
-      sleep 1
-      play :c5, amp: 0.25
-      sleep 1.5
+    8. times do
+      play (beats [x])
+      sleep (sleep [y])
+      x=x+1
+      y=y+1
     end
-    stop
+    x=0
+    y=0
   end
 end
 
 live_loop :lights do
-  3.times do
+  3. times do
     play :f5, sustain: 2
     play :b4, sustain: 2
     sleep 4
@@ -83,9 +58,7 @@ live_loop :lights do
   end
   stop
 end
+
 sleep 82
 
-after_hours="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours (Audio).wav"
-
-sample after_hours, amp: 1
-
+sample after_hours
