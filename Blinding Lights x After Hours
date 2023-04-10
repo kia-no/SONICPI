@@ -1,12 +1,14 @@
 #weeknd
-after_hours="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours (Audio).wav"
+after_beats="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours beats.wav"
 the_weeknd="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Blinding Lights (Official Audio).wav"
+lyrics="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - After Hours lyrics.wav"
 
-use_bpm 160
+
+use_bpm 168
 use_synth :piano
 
-beats = [:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5]
-sleep = [2,1.5,0.5,0.5,1,1,1,1.5]
+beats = [:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:g5,:e5,:d5,:d5,:c5]
+sleep = [2,1.5,0.5,0.5,1,0.5,0.5,1.5,2,1.5,0.5,0.5,1,0.5,0.5,1.5,0.5,1,0.5,0.5,1.5]
 
 live_loop :thewknd do
   1. times do
@@ -16,49 +18,60 @@ live_loop :thewknd do
   stop
 end
 
-sleep 47
-define :weeknd do
-  play :d5
+sleep 49
+
+
+define :blinding do |a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u|
+  play a
+  sleep 2
+  play b
   sleep 1.5
-  play :c5
+  play c
   sleep 0.5
+  play d
+  sleep 0.5
+  play e
+  sleep 1
+  play f
+  sleep 0.5
+  play g
+  sleep 0.5
+  play h
+  sleep 1.5
+  play i
+  sleep 2
+  play j
+  sleep 1.5
+  play k
+  sleep 0.5
+  play l
+  sleep 0.5
+  play m
+  sleep 1
+  play n
+  sleep 0.5
+  play o
+  sleep 0.5
+  play p
+  sleep 1.5
+  play q
+  sleep 0.5
+  play r
+  sleep 1
+  play s, amp: 1
+  sleep 0.5
+  play t, amp: 0.5
+  sleep 0.5
+  play u, amp: 0.25
+  sleep 1.5
+  
 end
 
-x=0
-y=0
+blinding :d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:g5,:e5,:d5,:d5,:c5
+blinding :d5,:c5,:d5,:d5,:a4,:e5,:a4,:d5,:c5,:c5,:d5,:d5,:g5,:g5,:a4,:c5,:g5,:e5,:g5,:d5,:e5
+blinding :c5,:d5,:e5,:g5,:c5,:a4,:a4,:c5,:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:g5,:e5,:d5,:d5,:c5
 
-live_loop :blinding do
-  with_fx :echo do
-    8. times do
-      play (beats [x])
-      sleep (sleep [y])
-      x=x+1
-      y=y+1
-    end
-    x=0
-    y=0
-  end
-end
+sample after_beats
+sleep 40
+sample lyrics
 
-live_loop :lights do
-  3. times do
-    play :f5, sustain: 2
-    play :b4, sustain: 2
-    sleep 4
-    play :c5, sustain: 2
-    play :f4, sustain: 2
-    sleep 8
-    play :e5, sustain: 2
-    play :f4, sustain: 2
-    sleep 4
-    play :e5
-    sleep 2
-    play :e5
-    sleep 2
-  end
-  stop
-end
-
-sleep 82
-
-sample after_hours
