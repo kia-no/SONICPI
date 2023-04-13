@@ -1,50 +1,38 @@
-use_bpm 168
-run_away="C:/Users/Kiano Lim/Documents/Audacity/The Weeknd - Save Your Tears opening.wav"
-sample run_away
-sleep 25
-define :save do |n1, n2|
+use_bpm 128
+define :save do |n1,n2,n3,n4|
   play n1
   play n2
   sleep 0.5
 end
 
-save :a4, :c5
-save :c5,:c5
-save :c5,:c5
-save :c5,:a4
-save :c5,:d5
-save :b4,:b4
-save :g4,:b4
-save :b4,:b4
-save :b4,:g4
-save :g4,:g4
-save :b4,:d5
-save :d5,:d5
-save :a4,:r
-save :c5,:c5
-save :c5,:c5
-save :a4,:c5
-save :a4,:r
-save :c5,:d5
-save :b4,:b4
-save :g4,:b4
-save :b4,:r
-save :b4,:g4
-save :g4,:g4
-save :b4,:c5
-save :c5,:r
+save :a4,:c5,:c5,:c5
+save :c5,:c5,:c5,:a4
+save :c5,:d5,:b4,:b4
+save :g4,:b4,:b4,:b4
+save :b4,:g4,:g4,:g4
+save :b4,:d5,:d5,:d5
+save :a4,:r,:c5,:c5
+save :c5,:c5,:a4,:c5
+save :a4,:r,:c5,:d5
+save :b4,:b4,:g4,:b4
+save :b4,:r,:b4,:g4
+save :g4,:g4,:b4,:c5
+save :c5,:r,:r,:r
+save :a4,:c5,:c5,:c5
+save :c5,:c5,:c5,:a4
+save :c5,:d5,:b4,:b4
+save :g4,:b4,:b4,:b4
 
 sound = [:g5,:e5,:g5,:e5,:e5,:g5,:a6,:e5,:e5]
 time = [1,1,1,2,0.5,1.5,1,1,3]
 x=0
 y=0
-live_loop :tears do
-  9.times do
-    play sound[x]
-    sleep time[y]
-    x=x+1
-    y=y+1
-  end
-  x=0
-  y=0
+
+9.times do
+  play sound[x]
+  sleep time[y]
+  x=x+1
+  y=y+1
 end
+x=0
+y=0
