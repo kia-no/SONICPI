@@ -22,7 +22,7 @@ live_loop :thewknd do
   stop
 end
 
-sleep 49
+sleep 48
 
 
 define :blinding do |a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u|
@@ -76,7 +76,7 @@ blinding :d5,:c5,:d5,:d5,:a4,:e5,:a4,:d5,:c5,:c5,:d5,:d5,:g5,:g5,:a4,:c5,:g5,:e5
 blinding :c5,:d5,:e5,:g5,:c5,:a4,:a4,:c5,:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:g5,:e5,:d5,:d5,:c5
 
 sample after_beats
-sleep 99
+sleep 40
 sample lyrics
 sleep 52
 sample open
@@ -111,15 +111,17 @@ save :c5,:d5,:b4,:b4
 save :g4,:b4,:b4,:b4
 
 sound = [:g5,:e5,:g5,:e5,:e5,:g5,:a6,:e5,:e5]
-time = [1,1,1,2,0.5,1.5,1,1,3]
+times = [1,1,1,2,0.5,1.5,1,1,3]
 x=0
 y=0
 
-27.times do
-  play sound[x]
-  sleep time[y]
-  x=x+1
-  y=y+1
-end
-x=0
-y=0
+3.times do
+  9.times do
+    play sound[x]
+    sleep times[y]
+    x=x+1
+    y=y+1
+  end
+  x=0
+  y=0
+  end
