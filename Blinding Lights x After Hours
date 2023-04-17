@@ -78,13 +78,13 @@ blinding :c5,:d5,:e5,:g5,:c5,:a4,:a4,:c5,:d5,:d5,:c5,:d5,:e5,:a4,:a4,:c5,:g5,:e5
 sample after_beats
 sleep 40
 sample lyrics
-sleep 52
+sleep 49
 sample open
-sleep 28
+sleep 22
 sample run_away
-sleep 25
+sleep 24
 
-use_bpm 118
+use_bpm 120
 use_synth :piano
 define :save do |n1,n2,n3,n4|
   play n1
@@ -124,4 +124,4 @@ y=0
   end
   x=0
   y=0
-  end
+end
