@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class upDownPlatform : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public Vector3 positionChange;
+    void Start()
+    {
+        positionChange = new Vector3(0, 1, 0);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position += (positionChange * Time.deltaTime);
+        Debug.Log("Y-Position: " + transform.position.y);
+        if (transform.position.y > 2500)
+        {
+            positionChange = new Vector3(0, -1, 0); //move the platform DOWN
+        }
+        else if (transform.position.y < 2473)
+        {
+            positionChange = new Vector3(0, 1, 0); //move the platform UP
+        }
+        else
+        {
+            //just chill
+        }
+    }
+}
